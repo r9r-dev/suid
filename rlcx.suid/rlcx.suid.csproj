@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Ronan Lamour</Authors>
+    <Company>Ronan Lamour</Company>
+    <Description>A Simple Unique Identifier (SUID) is (almost) unique like a GUID but only 7 characters !
+
+There are five types of fixed size SUID : 
+* LettersOnlySuid : 14 lowercase letters
+* UrlFriendlySuid : 10 url friendly characters
+* FilenameSuid : 10 characters than can be used to create a filename
+* Suid : 9 printable characters
+* TinySuid : 7 copy pastable characters
+ 
+There are also extensions to convert a guid into a Suid (20 characters) or a TinySuid (16 characters).
+By copy pastable, it means that it can be visible with a proper font (like Arial or Segoe UI)
+
+Collision : Is it possible to create two Suid that are the same ? Yes and no.
+For Suids in only one instance of the generator, you can't get the same unique identifier for more than 160 years (in 2178). Exception is if you create more than 65535 suids in the same second (1 every 15 µs) you could possibly get a duplicate. In fact, there is 1/256 chance to get a collision on the 65536th created suid in the same second.
+For Suids in multiple instances, chance is 1 / 16 777 216 if created in the same second. So, Suid is NOT recommended if  you create multiple suids in multiple instances that need to stay unique without any possible verification of uniqueness. If you use Suid that way, I recommend using the Guid extension ToTinySuid() (16 characters) or ToSuid() (20 characters) from a real guid.</Description>
+    <PackageId>rlcx.suid</PackageId>
+    <Product>Suid generator. The (almost) unique id generator that is only 7 characters</Product>
+    <Copyright>Ronan Lamour</Copyright>
+    <PackageTags>guid shortid id uuid short short-guid</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\dev\cs\rlcx.suid\rlcx.suid\rlcx.suid.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>rlcx.suid</name>
+    </assembly>
+    <members>
+        <member name="T:rlcx.suid.Ascii85">
+            <summary>
+            Converts between binary data and an Ascii85-encoded string.
+            Source : https://github.com/LogosBible/Logos.Utility/blob/master/src/Logos.Utility/Ascii85.cs
+            </summary>
+            <remarks>See <a href="http://en.wikipedia.org/wiki/Ascii85">Ascii85 at Wikipedia</a>.</remarks>
+        </member>
+        <member name="M:rlcx.suid.Ascii85.Encode(System.Byte[])">
+            <summary>
+            Encodes the specified byte array in Ascii85.
+            </summary>
+            <param name="bytes">The bytes to encode.</param>
+            <returns>An Ascii85-encoded string representing the input byte array.</returns>
+        </member>
+        <member name="M:rlcx.suid.Suid.NewLettersOnlySuid">
+            <summary>
+            Generate a 16 lowercase characters Suid
+            </summary>
+        </member>
+        <member name="M:rlcx.suid.Suid.NewTinySuid">
+            <summary>
+            Generate a 8 copy pastable characters Suid (base256)
+            </summary>
+        </member>
+        <member name="M:rlcx.suid.Suid.NewSuid">
+            <summary>
+            Generate a 10 printable characters Suid
+            </summary>
+            <returns>string representation</returns>
+        </member>
+        <member name="M:rlcx.suid.Suid.ToTinySuid(System.Guid)">
+            <summary>
+            Convert a Guid into it's truly unique TinySuid representation
+            </summary>
+            <param name="g"></param>
+            <returns></returns>
+        </member>
+        <member name="M:rlcx.suid.Suid.ToSuid(System.Guid)">
+            <summary>
+            Convert a Guid into it's truly unique Suid representation
+            </summary>
+            <param name="g"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
